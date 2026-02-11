@@ -14,16 +14,23 @@
     }
 
     :root {
-      --color-primario: #1a5f7a;
-      --color-primario-claro: #2d8ba8;
-      --color-acento: #159895;
-      --color-fondo: #f0f4f8;
+      /* Paleta principal */
+      --imperial-blue: #00296b;
+      --french-blue: #003f88;
+      --steel-azure: #00509d;
+      --school-bus-yellow: #fdc500;
+      --gold: #ffd500;
+      /* Variables derivadas para la guía */
+      --color-primario: var(--imperial-blue);
+      --color-primario-claro: var(--french-blue);
+      --color-acento: var(--gold);
+      --color-fondo: #e8eef5;
       --color-card: #ffffff;
-      --color-texto: #1e293b;
-      --color-texto-suave: #64748b;
-      --color-borde: #e2e8f0;
-      --sombra-card: 0 1px 3px rgba(0, 0, 0, 0.06);
-      --sombra-card-hover: 0 4px 12px rgba(26, 95, 122, 0.12);
+      --color-texto: var(--imperial-blue);
+      --color-texto-suave: var(--steel-azure);
+      --color-borde: #b8d4e8;
+      --sombra-card: 0 1px 3px rgba(0, 41, 107, 0.08);
+      --sombra-card-hover: 0 4px 12px rgba(0, 41, 107, 0.15);
       --radio: 10px;
     }
 
@@ -52,7 +59,7 @@
     }
 
     a:focus-visible {
-      outline: 2px solid var(--color-acento);
+      outline: 2px solid var(--gold);
       outline-offset: 2px;
     }
 
@@ -60,11 +67,11 @@
     code {
       font-family: 'Consolas', 'Monaco', 'Liberation Mono', monospace;
       font-size: 0.9em;
-      background: #e8f4f8;
-      color: var(--color-primario);
+      background: #fff9e6;
+      color: var(--imperial-blue);
       padding: 0.2em 0.5em;
       border-radius: 5px;
-      border: 1px solid #b8d4e0;
+      border: 1px solid var(--school-bus-yellow);
     }
 
     /* Header principal */
@@ -72,8 +79,8 @@
       text-align: center;
       padding: 2.5rem 1rem;
       margin-bottom: 2.5rem;
-      background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-acento) 100%);
-      color: #fff;
+      background: linear-gradient(135deg, var(--imperial-blue) 0%, var(--steel-azure) 100%);
+      color: var(--gold);
       border-radius: var(--radio);
       box-shadow: var(--sombra-card);
     }
@@ -146,7 +153,7 @@
 
     section:hover {
       box-shadow: var(--sombra-card-hover);
-      border-color: #c5e1eb;
+      border-color: var(--color-borde);
     }
 
     section h2 {
@@ -164,8 +171,8 @@
       justify-content: center;
       width: 2rem;
       height: 2rem;
-      background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
-      color: #fff;
+      background: linear-gradient(135deg, var(--french-blue), var(--steel-azure));
+      color: var(--gold);
       font-size: 0.9rem;
       font-weight: 700;
       border-radius: 8px;
@@ -178,10 +185,10 @@
 
     /* Contenedores de ejemplo grid */
     .ejemplo-grid {
-      background: #f8fafc;
+      background: #f0f6fc;
       padding: 1.75rem;
       border-radius: 8px;
-      border: 1px dashed var(--color-borde);
+      border: 1px dashed var(--steel-azure);
       margin-top: 1.25rem;
       position: relative;
     }
@@ -214,41 +221,42 @@
     }
 
     .caja-1 {
-      background: linear-gradient(145deg, #e07a5f, #c96a52);
+      background: linear-gradient(145deg, var(--imperial-blue), #001a4d);
     }
 
     .caja-2 {
-      background: linear-gradient(145deg, #81b29a, #6a9a82);
+      background: linear-gradient(145deg, var(--french-blue), var(--imperial-blue));
     }
 
     .caja-3 {
-      background: linear-gradient(145deg, #3d405b, #2d3047);
+      background: linear-gradient(145deg, var(--steel-azure), var(--french-blue));
     }
 
     .caja-4 {
-      background: linear-gradient(145deg, #f2cc8f, #e0b87a);
-      color: #2c2c2c;
+      background: linear-gradient(145deg, var(--gold), var(--school-bus-yellow));
+      color: var(--imperial-blue);
     }
 
     .caja-5 {
-      background: linear-gradient(145deg, #9b5de5, #7d3fd4);
+      background: linear-gradient(145deg, var(--school-bus-yellow), #e0b000);
+      color: var(--imperial-blue);
     }
 
     .caja-6 {
-      background: linear-gradient(145deg, #00bbf9, #0099d4);
+      background: linear-gradient(145deg, #0066b3, var(--steel-azure));
     }
 
     .caja-7 {
-      background: linear-gradient(145deg, #f15bb5, #d94a9a);
+      background: linear-gradient(145deg, var(--steel-azure), var(--french-blue));
     }
 
     .caja-8 {
-      background: linear-gradient(145deg, #00f5d4, #00c9ad);
-      color: #1a1a1a;
+      background: linear-gradient(145deg, var(--gold), #ffdd33);
+      color: var(--imperial-blue);
     }
 
     .caja-9 {
-      background: linear-gradient(145deg, #6a4c93, #533a75);
+      background: linear-gradient(145deg, var(--french-blue), var(--imperial-blue));
     }
 
     /* Footer */
@@ -416,9 +424,9 @@
       margin-bottom: 0.5rem;
       font-weight: 600;
       padding: 0.35rem 0.6rem;
-      background: #e8f4f8;
+      background: #fff9e6;
       border-radius: 6px;
-      border-left: 3px solid var(--color-acento);
+      border-left: 3px solid var(--gold);
       display: inline-block;
     }
 
@@ -439,23 +447,23 @@
     }
 
     .nota {
-      background: #f0f9ff;
-      border-color: var(--color-primario-claro);
+      background: #e8f0fa;
+      border-color: var(--steel-azure);
       color: var(--color-texto);
     }
 
     .nota strong {
-      color: var(--color-primario);
+      color: var(--imperial-blue);
     }
 
     .consejo {
-      background: #f0fdf4;
-      border-color: var(--color-acento);
+      background: #fff9e6;
+      border-color: var(--school-bus-yellow);
       color: var(--color-texto);
     }
 
     .consejo strong {
-      color: #0d7a3a;
+      color: var(--imperial-blue);
     }
 
     /* ============================================
